@@ -4,88 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="stylCalc.css" rel="stylesheet">
+         
         <title>Calculator</title>
-
-        <style>
-            * {
-                box-sizing: border-box;
-                scroll-behavior: smooth;
-            }
-            h1 {
-               background: linear-gradient(90deg, #030355, rgb(3, 107, 50), rgb(180, 124, 87));
-               -webkit-text-fill-color: transparent;
-               background-clip: text;
-               -webkit-background-clip: text;
-               text-align: center;
-            }
-
-            .Calculator {
-                display: flex;
-                background: #428C8B;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 0;
-                width: 300px;
-                /* height: 350px; */
-                margin: auto;
-                /* transform: skew(4deg, 6deg); */
-                box-shadow: 5px 10px 20px #000;
-                border-radius: 15px;
-                padding: 12px;
-            }
-
-            .buttoins {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                background: #9DE0AD;
-                padding: 2.5px;
-                margin-bottom: 0;
-                border-radius: 6px;
-            }
-            .btn {
-                width: 57px;
-                height: 57px;
-                 color:#fff;
-                 border: none;
-                 border-radius: 6px;
-                 background: #073B3A;
-                margin: 4px;
-                font-size: 19px;
-                cursor: pointer;
-                font-weight: bold;
-            }
-           
-            .screen {
-                background: rgb(239, 243, 239);
-                height: 50px;
-                width: 90%;
-                border-radius: 15px;
-                margin-top: 15px;
-                color: #181616;
-                font-size: 25px;
-                font-weight: bold;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                padding-left: 5px;
-            }
-            #equals {
-               width: 114px;
-            }
-
-            #changement {
-            font-weight: bold;
-            border: 1px  black;
-            border-radius: 50%;
-            }
-            
-          </style>
-
+         
     </head>
         <body>
+         <script src="scriptCalc.js"></script>
             <h1>Calculator</h1>
                 
                 <div class="Calculator">
@@ -115,103 +40,6 @@
                         <br>
                         
                     </div>
-
-                    <script>
-                        let button = document.querySelector('button');
-                        let screen = document.querySelector('.screen');
-                       
-                     
-
-                        function seven(){
-                            screen.value += '7';
-                         }
-
-                         function eight(){
-                            screen.value += '8';
-                         };
-                         function nine(){
-                            screen.value += '9';
-                         };
-                         function plus(){
-                            screen.value += '+';
-                         };
-                         function four(){
-                            screen.value += '4';
-                         };
-                         function five(){
-                            screen.value += '5';
-                         };
-                         function six(){
-                            screen.value += '6';
-                         };
-                         function minus(){
-                            screen.value += '-';
-                         };
-                         function one(){
-                            screen.value += 1;
-                         };
-                         function two(){
-                            screen.value += '2';
-                         };
-                         function three(){
-                            screen.value += '3';
-                         };
-                         function fi(){
-                            screen.value += '*';
-                         };
-                         function sefr(){
-                            screen.value += '0';
-                         };
-                         function point(){
-                            screen.value += '.';
-                         };
-                         function kisma(){
-                            screen.value += '/';
-                         };
-
-                         function is() {
-                            screen.value = eval(screen.value);
-                         };
-
-                         function clEEar() {
-                            screen.value = screen.value.toString().slice(0,-1);
-                         };
-
-                        function clErAll() {
-                            screen.value= '';
-                        };
-
-                        
-                        function changeColor() {
-                           let bUTONE = document.getElementById('changement');
-                           let box1 = document.querySelector('.Calculator');
-                           let box2 = document.querySelector('.buttoins');
-                           let box3 = document.querySelector('button');
-                           let btns = document.querySelector('.btn');
-
-                           if (btns.innerHTML === 'vert') {
-                              bUTONE.innerHTML = 'blue', btns.style.background = '#000016', box1.style.background = '#041c6d', box3.style.background = '#173F5F', box2.style.background = '#85a0f8';
-                                 }
-                                 
-                                 else if (bUTONE.innerHTML === 'blue') {
-                                    bUTONE.innerHTML = 'rose'  , btns.style.background = '#041c6d', box1.style.background = '#E8175D', box3.style.background = '#C72C41', box2.style.background = '#FFAAA6';
-                                 }
-                                 else {
-                                    bUTONE.innerHTML = 'vert'  , btns.style.background = '#073B3A', box1.style.background = '#428C8B', box3.style.background = '#0A5C36', box2.style.background = '#9DE0AD';
-                                 }
-
-                                 //if (btn.innerHTML === 'bb' , box1.style.background === '#041c6d', box2.style.background === '#85a0f8')
-
-                                 // btn.innerHTML = 'redb' , box1.style.background = 'red', box2.style.background = 'Pink';
-                                 //else {
-                                   //  btn.innerHTML = 'CC' ,, box1.style.background = '#4d4d52', box2.style.background = '#5a5858';
-                                // }
-                        }
-                        /*else if (btn.innerHTML === 'blue' , box1.style.background === '#041c6d', box2.style.background === '#85a0f8') {
-                                    btn.innerHTML = 'CC' , box1.style.background = '#4d4d52', box2.style.background = 'grey';
-                                 }*/
-                    </script>
-
 
         </body>
  </html>    
